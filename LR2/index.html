@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="  ">
+    <input type='button' value='задание 1' onclick='question_one()' />
+    <input type='button' value='задание 2' onclick='question_two()' />
+    <input type='button' value='задание 3' onclick='question_three()' />
+    <input type='button' value='задание 4' onclick='question_four()' />
+    <input type='button' value='задание 5' onclick='question_five()' />
+    <input type='button' value='задание 6' onclick='' />
+  </form>
+<script type="text/javascript" src="script.js"></script>
+
+<script type="text/javascript">
+let x;
+x = Number(34.21);
+let str = "<table border = 1><tr><td>Число</td><td>Метод</td><td>Результат</td><td>Описнаие метода</td></tr>";
+str += "<tr><td>" + x + "</td><td>" + "toFixed(x)" + "</td><td>" + x.toFixed(3) + "</td><td>" + "toFixed(количество) – представляет число в форме с фиксированным количеством цифр после точки, параметр количество – целое число, определяющее, сколько цифр после точки следует указывать." + "</td></tr>";
+str += "<tr><td>" + x + "</td><td>" + "toExponential(x)" + "</td><td>" + x.toExponential(3) + "</td><td>" + "toExponential(количество) – представляет число в экспоненциальной форме, параметр количество – целое число, определяющее, сколько цифр после точки следует указывать" + "</td></tr>";
+str += "<tr><td>" + x + "</td><td>" + "toPrecision(x)" + "</td><td>" + x.toPrecision(3) + "</td><td>" + "toPrecision(точность) – представляет число с заданным общим количеством значащих цифр. Параметр точность – целое число, определяющее, сколько всего цифр, до и после точки, следует указывать." + "</td></tr>";
+str += "<tr><td>" + x + "</td><td>" + "toString(x)" + "</td><td>" + x.toString([2]) + "</td><td>" + "toString([основание]) – возвращает строковое представление числа в системе счисления с указанным основанием. Если параметр не указан, имеется в виду десятеричная система счисления. Этот метод имеют все объекты." + "</td></tr>";
+str += "</table>";
+document.write(str);
+</script>
+
+<script type='text/javascript'>
+  //задание 2 lr2
+  let a = prompt('Введите А');
+  let b = prompt('Введите B');
+  let str = "<table border=1><tr>";
+  for(let i = 1; i <= a ; i++){
+    str += "<td>" + i + "</td>";
+  }
+  for(let j = 1; j <= b; j++){
+    str += "<tr>";
+  for(let i = 1; i <= a ; i++){
+    str += "<td>" + i * j + "</td>";
+  }
+   str += "</tr>";
+  }
+  str += "</tr></table>";
+  document.write(str);
+</script>
+
+
+<script type="text/javascript">
+//заданеи 3 lr2
+  let a = prompt('Введите А');
+  let b = prompt('Введите B');
+  let str = "<table border = 1><tr><td>Радиус</td><td>Площадь круга</td><td>Длина окружности</td></tr>";
+  document.write(str);
+  let str2 = " ";
+  do{
+  str2 = " ";
+  str2 += "<tr><td>";
+  str2 += a;
+  str2 += "</td><td>";
+  str2 += 3.14 * (a * a) / 2;
+  str2 += "</td><td>";
+  str2 += 2 * a * 3.14;
+  str2 += "</td></tr>";
+  a = Number(a) + 0.3;
+  document.write(str2);
+  }while(a < b);
+  document.write("</table>");
+</script>
+
+</body>
+
+</html>
