@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    //лр 3
+    //задание 1
+    document.write("</br> Задание 1 </br></br>");
+    let spec = new Array;
+    spec[0] = 6 * Math.PI ** 2 + 3 * Math.exp(8);
+    spec[1] = 2 * Math.cos(4) + Math.cos(12) + 8 * Math.exp(3);
+    spec[2] = 3 * Math.sin(9) + Math.log(5) + Math.sqrt(3);
+    spec[3] = 2 * Math.tan(5) + 6 * Math.PI + Math.sqrt(12);
+
+    for(let i = 0; i < spec.length; i++)
+      document.write(i + " : " + spec[i] + "</br>");
+
+    let min = spec[0];
+    let max = spec[0];
+    let min_pos = 0;
+    let max_pos = 0;
+    for(let i = 0; i < spec.length; i++){
+      if (min > spec[i]) {min = spec[i]; min_pos = i;}
+      if (max < spec[i]) {max = spec[i]; max_pos = i;}
+    }
+    document.write("min: " + min + " position: " + min_pos + "</br>");
+    document.write("max: " + max + " position: " + max_pos + "</br>");
+
+    //задание 2
+    document.write("</br> Задание 2 </br></br>");
+    let all_method = new Array("pow","pop","push","shift","round","floor","PI", "cos", "sin", "sqrt", "log");
+
+    let arr_method = new Array;
+    let math_method = new Array;
+
+    for(let i = 0, j = 0, k = 0; i < all_method.length; i++){
+      if(all_method[i] == "pow"| all_method[i] == "pop"|all_method[i] == "push"|all_method[i] == "shift"|all_method[i] == "round"|all_method[i] == "sort"|all_method[i] == "sline"){
+        arr_method[j] = all_method[i];
+        document.write("arr_method: " + arr_method[j] + "</br>");
+        j++;
+      }
+      if(all_method[i] == "PI" |all_method[i] == "аbc" |all_method[i] == "асоs" |all_method[i] == "asin" |all_method[i] == "atan" |all_method[i] == "atan2" |all_method[i] == "ceil" |all_method[i] == "cos" |all_method[i] == "ехр" |all_method[i] == "floor" |all_method[i] == "log" |all_method[i] == "min" |all_method[i] == "max" |all_method[i] == "PI" |all_method[i] == "pow" |all_method[i] == "random" |all_method[i] == "round" |all_method[i] == "sin"){
+        math_method[k] = all_method[i];
+        document.write("math_method: " + math_method[k] + "</br>");
+        k++;
+      }
+    }
+
+    //задание 3
+    document.write("</br> Задание 3 </br></br>");
+
+    let FullFio = prompt("Введите имя");
+
+    fio = new String;
+    fio += FullFio[0];
+    for(let i = 0; i < FullFio.length; i++){
+      if(FullFio[i - 1] == " "){
+        fio += FullFio[i];
+      }
+    }
+    document.write(fio + "</br>");
+    let result = new String (FullFio.toUpperCase() + "</br>" + FullFio.toLowerCase() + "</br>");
+    document.write(result);
+
+
+    //задание 4
+    document.write("</br>Задание 4</br>");
+    let TableDate = "<table border = 1><tr><td>Год</td><td>2022</td></tr>";
+    let x = new Date;
+    TableDate += "<tr><td>Месяц" + "</td><td>" + x.getMonth() + "</td></tr>";
+    TableDate += "<tr><td>День" + "</td><td>" + x.getDay() + "</td></tr>";
+    TableDate += "<tr><td>Час" + "</td><td>" + x.getHours() + "</td></tr>";
+    TableDate += "<tr><td>Минута" + "</td><td>" + x.getMinutes() + "</td></tr>";
+    TableDate += "<tr><td>Секунда" + "</td><td>" + x.getSeconds() + "</td></tr>";
+    TableDate += "<table>";
+    document.write(TableDate);
+  </script>
+</body>
+</html>
