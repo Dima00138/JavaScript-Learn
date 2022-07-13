@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    //Задание 1
+    function Gruppa(n,spec,kolich) {
+  //Свойства(номер, специальность, количество)
+  this.n=n;
+  this.spec=spec;
+  this.kolich=kolich;
+  //Метод (добавить в группу k студентов)
+  this.add_stud=function add_stud(k) {
+  this.kolich+=k;
+  document.write('В группу ' + this.n + ' добавили '+ k + '  студентов.</br>');
+  }
+  this.sub_stud = function sub_stud(kol){
+    this.kolich-=kol;
+    document.write('В группе ' + this.n + ' уменьшилось на '+ kol + '  студентов.</br>');
+  }
+   }
+  //Теперь можно создавать экземпляры объекта
+  gr1=new Gruppa(2,  ' ИСиТ ' , 28);
+  //Вызов метода созданного объекта (добавить 2 студента)
+  gr1.add_stud(2);
+  gr1.sub_stud(8);
+  //C помощью prototype добавим объекту свойство kurs,
+  //экземпляры объекта будут иметь это свойство
+  Gruppa.prototype.kurs=this.kurs
+  gr1.kurs=2
+  document.write(gr1.n,gr1.spec, gr1.kolich, " курс ", gr1.kurs)
+
+  gr2=new Gruppa(1,  ' ПОИТ ' , 25);
+  gr2.kurs=1;
+  document.write("</br>",gr2.n,gr2.spec, gr2.kolich, " курс ", gr2.kurs)
+  gr3=new Gruppa(3,  ' ДЭВИ ' , 18);
+  gr3.kurs=3;
+  document.write("</br>",gr3.n,gr3.spec, gr3.kolich, " курс ", gr3.kurs)
+  gr4=new Gruppa(4,  ' ХТИТ ' , 30);
+  gr4.kurs=1;
+  document.write("</br>",gr4.n,gr4.spec, gr4.kolich, " курс ", gr4.kurs)
+
+  //Задание 2
+  function Student(name, subname, phy, mth, infm){
+    this.name = name;
+    this.subname= subname;
+    this.phy = phy;
+    this.mth = mth;
+    this.infm = infm;
+    this.sr_ball;
+    this.ball = function ball(){
+      this.sr_ball = (this.phy + this.mth + this.infm) / 3;
+      document.write("</br>",this.name," ",this.subname," Средний балл ", this.sr_ball);
+    }
+  }
+  stud_one = new Student("Антон","Киселёв",5,6,8);
+  Student.prototype.spec=this.spec;
+
+  let students = new Array;
+  students[0] = new Student("Антон","Киселёв",5,6,8);
+  students[1] = new Student("Владимир","Сенов",4,5,6);
+  students[2] = new Student("Сергей","Кузнёв",9,7,10);
+  students[3] = new Student("Вова","Бобов",7,7,7);
+
+  students[0].spec = "ПОИТ";
+  students[1].spec = "ПОИТ";
+  students[2].spec = "ПОИТ";
+  students[3].spec = "ИСИТ";
+
+  for(let i = 0; i < students.length; i++){
+    students[i].ball();
+  }
+
+  for(let i = 0; i < students.length; i++){
+    if(students[i].spec == "ПОИТ"){
+    document.write("</br>",students[i].name,' ', students[i].subname,' ', students[i].phy,' ',
+    students[i].mth,' ',students[i].infm,' ',students[i].sr_ball,' ',students[i].spec)
+    }
+  }
+
+  //Задание 3
+  document.write("</br></br>Задание 3</br>");
+  for(let i = 0; i < students.length; i++){
+    document.write("</br>Исходный ",students[i].name,' ', students[i].subname,' ', students[i].phy,' ',
+    students[i].mth,' ',students[i].infm,' ',students[i].sr_ball,' ',students[i].spec)
+  }
+  delete students[3];
+
+  document.write("</br>");
+  for(let i = 0; i < students.length; i++){
+    if(!students[i]) continue;
+    document.write("</br> Итоговый ",students[i].name,' ', students[i].subname,' ', students[i].phy,' ',
+    students[i].mth,' ',students[i].infm,' ',students[i].sr_ball,' ',students[i].spec)
+  }
+
+  document.write("</br>");
+  document.write("</br>",3 in students);
+  document.write("</br>","name" in students[1]);
+  document.write("</br>","n" in gr1);
+  document.write("</br>",students instanceof Array);
+  document.write("</br>",students.name instanceof String);
+
+  function last(){
+    document.write("</br>",typeof students[1].name);
+    document.write("</br>",typeof students[1].subname);
+    document.write("</br>",typeof students[1].phy);
+    document.write("</br>",typeof students[1].mth);
+    document.write("</br>",typeof students[1].infm);
+    document.write("</br>",typeof students[1].ball);
+    document.write("</br>",typeof students);
+
+    document.write("</br>");
+
+    document.write("</br>",typeof gr1.n);
+    document.write("</br>",typeof gr1.spec);
+    document.write("</br>",typeof gr1.kolich);
+    document.write("</br>",typeof gr1.add_stud);
+    document.write("</br>",typeof gr1.spec);
+    document.write("</br>",typeof Gruppa);
+    return 5;
+  }
+  last();
+  </script>
+</body>
+</html>
