@@ -53,3 +53,11 @@ console.log(document.getElementById('identspan').innerHTML)
 
 
 //задание 4
+
+for(let i = 1, sr_ball=0;;i++){
+  if(!table.rows[i]){
+    document.getElementById('identspan2').innerHTML= (sr_ball / 3);
+    break
+  }
+  sr_ball += Number(table.rows[i].cells[1].innerHTML)
+}
