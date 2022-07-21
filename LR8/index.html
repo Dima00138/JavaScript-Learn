@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    .wrapper{
+    max-width:1280px;
+    margin:auto;
+    color:#D9D9D9;
+    }
+    body{
+      background-color:#0D0D0D;
+    }
+    ul{
+      list-style-type: none;
+    }
+    img{
+      background-color:#D9D9D9;
+      border-radius:5px;
+      padding:5px;
+      margin: 15px 15px 5px 5px;
+    }
+    header ul{
+      display:flex;
+    }
+    header li{
+      margin-right:25px;
+    }
+    header a{
+      text-decoration:none;
+    }
+    header a:visited{
+      text-decoration:none;
+      color:#D9D9D9;
+    }
+    div{
+      border: 1px solid #595959;
+      border-radius:5px;
+      margin:30px;
+    }
+    .info p{
+    margin: 15px 5px 15px 0 ;
+    }
+    .info h1{
+      margin: 15px 0 0 30px;
+    }
+    .info img{
+      float:left;
+    }
+    footer img{
+      height:100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div>
+        <ul>
+          <li id="header-menu_button" Onclick="menu_buttonOnclick()">Главная</li>
+          <li>информация</li>
+          <li>подвал</li>
+        </ul>
+      </div>
+    </header>
+    <div class="info">
+      <!--Заданеи 1-->
+      <h1><span id="Bober" onmouseover="mouseOverBober()" onmouseout="mouseOutBober()">Бобёр</span> и рыбатекст</h1>
+      <div>
+        <img id="imageDiv" Onclick="imageDivChange()" src="pictute2.png" alt="" height="200px">
+        <p id="infoText" ondblclick="infoTextEdit()">
+          Разнообразный и богатый опыт сложившаяся структура организации влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Равным образом укрепление и развитие структуры представляет собой интересный эксперимент проверки новых предложений. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют определения и уточнения направлений прогрессивного развития.
+
+          Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. С другой стороны укрепление и развитие структуры позволяет оценить значение соответствующий условий активизации. С другой стороны консультация с широким активом в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Равным образом дальнейшее развитие различных форм деятельности позволяет оценить значение соответствующий условий активизации. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <div id="footerText" style="text-align: center;">
+          <img id="footerImg" Onclick="footerImgToText()" src="pictute2.png" alt="">
+        </div>
+        <div style="text-align: center;">
+          <img src="pictute2.png" alt="" id="BoberFooter" onmouseover="mouseOverBoberFooter()" onmouseout="mouseOutBoberFooter()">
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
