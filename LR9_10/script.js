@@ -85,19 +85,11 @@ moveObjTwo.onclick = function(){
   let y = 1;
   setInterval(function(){
 
-    if(y == 101){
-      return;
-    }
+    if(y == 101){return;}
 
-    if(x < 110){
-    moveObjTwo.style.left = x + 'px';
-    x++
-    }
+    if(x < 110){moveObjTwo.style.left = x + 'px'; x++ }
 
-    if(x >= 110){
-      moveObjTwo.style.left = x - y + 'px';
-      y++
-    }
+    if(x >= 110){moveObjTwo.style.left = x - y + 'px'; y++ }
 
   },20);
 }
@@ -107,11 +99,32 @@ moveObjTwo.onclick = function(){
 let moveObjThree = document.getElementById('moveObjThree');
 
 moveObjThree.onclick = function(){
-  let x = 0
-  //написаь получение начальных коорд объекта
-  setInterval(curveMove(x), 20)
+  //переменные для счёта
+  let x = 0;
+  let y = 0;
+  //написаь получение начальных коорд двигаемого объекта
+  coordY = moveObjThree.getBoundingClientRect().y;
+  coordX = moveObjThree.getBoundingClientRect().x;
 
-  function curveMove(x) {
-    //передвижение по окружности с помощью синусоиду с учётом начальных оорд объекта
-  }
+  setInterval(function(){
+    if(y == 600){return;}
+
+    moveObjThree.style.top = coordY + Math.sin(x) * 100 + 'px';
+
+    if(y < 300){
+      moveObjThree.style.left = coordX + x * 100 + 'px';
+      x += 0.01;
+    }
+
+    if(y >= 300){
+      moveObjThree.style.left = coordX + x * 100 + 'px';
+      x -= 0.01;
+    }
+
+    y++
+  }, 10)
+
 }
+
+
+//Задание 4

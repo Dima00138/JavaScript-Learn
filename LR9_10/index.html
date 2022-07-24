@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head><TITLE>Перемещаемое изображение</TITLE></head>
+<head>
+  <TITLE>Перемещаемое изображение</TITLE>
+  <style>
+  input[type="radio"]{
+
+  }
+  </style>
+</head>
 <body id = "mybody" >
 <img
 ID="moveObj"
@@ -18,6 +25,12 @@ SRC = "Безымянный.png"
 style= "position:absolute; top:210px; left:10px; height:100px"
 />
 </body>
+<form class="" action="index.html" method="post">
+  <input type="radio" name="radioGraph" id="radioGraph1"> y = x^2
+  <input type="radio" name="radioGraph" id="radioGraph2"> y = x^3
+  <input type="radio" name="radioGraph" id="radioGraph3"> y = sin(x)
+  <input type="radio" name="radioGraph" id="radioGraph4"> y = cos(x)
+</form>
 <script src="script.js">
 </script>
 </html>
