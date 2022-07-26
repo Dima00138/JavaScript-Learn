@@ -36,7 +36,13 @@ style= "position:absolute; top:210px; left:10px; height:100px"
 
 <div class="container">
   <div class="container__graphic">
-    <form class="" action="index.html" method="post">
+    <form id="form" action="index.html" method="post">
+      <select name="color">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>Black</option>
+      </select>
       <input type="radio" name="radioGraph" onclick="draw(1)"> y = x^2
       <input type="radio" name="radioGraph" onclick="draw(2)"> y = x^3
       <input type="radio" name="radioGraph" onclick="draw(3)"> y = sin(x)

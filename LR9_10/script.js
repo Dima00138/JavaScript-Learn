@@ -128,6 +128,7 @@ moveObjThree.onclick = function(){
 
 
 //Задание 4
+
 function draw(choice) {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
@@ -141,7 +142,7 @@ function draw(choice) {
       ctx.clearRect(0, 0, 400, 300);
       ctx.beginPath();
       ctx.lineWidth = 3; // толщина обводки
-      ctx.strokeStyle="green"; // цвет обводки
+      ctx.strokeStyle= document.getElementById('form').color.value; // цвет обводки
       ctx.moveTo(0,150);
 
       for (let i = x; i < 100; i++) {
@@ -158,7 +159,7 @@ function draw(choice) {
       ctx.clearRect(0, 0, 400, 300);
       ctx.beginPath();
       ctx.lineWidth = 3; // толщина обводки
-      ctx.strokeStyle="green"; // цвет обводки
+      ctx.strokeStyle= document.getElementById('form').color.value; // цвет обводки
       ctx.moveTo(0,150);
 
       for (let i = x; i < 100; i++) {
@@ -174,7 +175,7 @@ function draw(choice) {
       ctx.clearRect(0, 0, 400, 300);
       ctx.beginPath();
       ctx.lineWidth = 3; // толщина обводки
-      ctx.strokeStyle="green"; // цвет обводки
+      ctx.strokeStyle= document.getElementById('form').color.value; // цвет обводки
       ctx.moveTo(0,150);
 
       for (let i = x; i < 100; i++) {
@@ -190,7 +191,7 @@ function draw(choice) {
       ctx.clearRect(0, 0, 400, 300);
       ctx.beginPath();
       ctx.lineWidth = 3; // толщина обводки
-      ctx.strokeStyle="green"; // цвет обводки
+      ctx.strokeStyle= document.getElementById('form').color.value; // цвет обводки
       ctx.moveTo(0,150);
 
       for (let i = x; i < 100; i++) {
