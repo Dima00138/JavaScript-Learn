@@ -128,3 +128,77 @@ moveObjThree.onclick = function(){
 
 
 //Задание 4
+function draw(choice) {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+
+    let x = 1;
+    let y = 0;
+
+    var ctx = canvas.getContext('2d');
+
+    if(choice == 1){
+      ctx.clearRect(0, 0, 400, 300);
+      ctx.beginPath();
+      ctx.lineWidth = 3; // толщина обводки
+      ctx.strokeStyle="green"; // цвет обводки
+      ctx.moveTo(0,150);
+
+      for (let i = x; i < 100; i++) {
+        y = i * i;
+        ctx.lineTo(i,150 + y);
+      }
+
+
+      ctx.stroke();
+    }
+
+    if(choice == 2){
+
+      ctx.clearRect(0, 0, 400, 300);
+      ctx.beginPath();
+      ctx.lineWidth = 3; // толщина обводки
+      ctx.strokeStyle="green"; // цвет обводки
+      ctx.moveTo(0,150);
+
+      for (let i = x; i < 100; i++) {
+        y = i * i * i;
+        ctx.lineTo(i,150 + y);
+      }
+
+      ctx.stroke();
+    }
+
+    if(choice == 3){
+
+      ctx.clearRect(0, 0, 400, 300);
+      ctx.beginPath();
+      ctx.lineWidth = 3; // толщина обводки
+      ctx.strokeStyle="green"; // цвет обводки
+      ctx.moveTo(0,150);
+
+      for (let i = x; i < 100; i++) {
+        y = Math.sin(i)
+        ctx.lineTo(i,150 + y);
+      }
+
+      ctx.stroke();
+    }
+
+    if(choice == 4){
+
+      ctx.clearRect(0, 0, 400, 300);
+      ctx.beginPath();
+      ctx.lineWidth = 3; // толщина обводки
+      ctx.strokeStyle="green"; // цвет обводки
+      ctx.moveTo(0,150);
+
+      for (let i = x; i < 100; i++) {
+        y = Math.cos(i);
+        ctx.lineTo(i,150 + y);
+      }
+
+      ctx.stroke();
+    }
+  }
+}
