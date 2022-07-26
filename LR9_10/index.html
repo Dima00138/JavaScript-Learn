@@ -15,6 +15,24 @@
   .container__graphic{
     text-align: center;
   }
+  .menu-item{
+  border: 2px soild #66CDAA;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  }
+  .menu-item .submenu{
+  height: 40px;
+  width: 120;
+  background: green;
+  position: absolute;
+  cursor: pointer;
+  display:none;
+  }
+  header{
+    margin-left: 150px;
+    margin-bottom: 50px;
+  }
   </style>
 </head>
 <body id = "mybody" >
@@ -33,6 +51,27 @@ ID="moveObjThree"
 SRC = "Безымянный.png"
 style= "position:absolute; top:210px; left:10px; height:100px"
 />
+
+
+<header>
+    <div id="nav">
+    <div class="menu-item">
+    Меню 1
+    <div class="submenu">
+    Подменю
+    </div></div>
+    <div class="menu-item">
+    Меню 2
+    <div class="submenu">
+    Подменю
+    </div></div>
+    <div class="menu-item">
+    Меню 3
+    <div class="submenu">
+    Подменю
+    </div></div>
+  </div>
+</header>
 
 <div class="container">
   <div class="container__graphic">
